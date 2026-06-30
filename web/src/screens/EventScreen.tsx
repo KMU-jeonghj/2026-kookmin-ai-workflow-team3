@@ -1,6 +1,7 @@
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { ChoiceButtons } from '@/components/ChoiceButtons'
 import { NarrativeBox } from '@/components/NarrativeBox'
+import { StatTrendBadges } from '@/components/StatTrendBadges'
 import { getEvent } from '@/data/events'
 import { useGameStore } from '@/store/gameStore'
 
@@ -8,6 +9,7 @@ export function EventScreen() {
   const phase = useGameStore((state) => state.phase)
   const currentEventId = useGameStore((state) => state.currentEventId)
   const feedback = useGameStore((state) => state.feedback)
+  const feedbackEffects = useGameStore((state) => state.feedbackEffects)
   const selectChoice = useGameStore((state) => state.selectChoice)
   const advanceAuto = useGameStore((state) => state.advanceAuto)
   const dismissFeedback = useGameStore((state) => state.dismissFeedback)
@@ -23,11 +25,14 @@ export function EventScreen() {
       <div className="relative z-10 mt-auto flex w-full flex-col gap-4 p-4 md:p-8">
         <div className="mx-auto w-full max-w-3xl">
           {showFeedback ? (
-            <NarrativeBox
-              variant="feedback"
-              title="현장 반응"
-              text={feedback}
-            />
+            <div className="flex flex-col gap-3">
+              <NarrativeBox
+                variant="feedback"
+                title="현장 반응"
+                text={feedback}
+              />
+              <StatTrendBadges effects={feedbackEffects} />
+            </div>
           ) : (
             <NarrativeBox title={event.title} text={event.text} />
           )}
