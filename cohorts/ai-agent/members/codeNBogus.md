@@ -25,6 +25,7 @@
 | 완료 | 이벤트 가중치 밸런스 조정 (E1·E2·E6-1) | `web/src/data/events.ts`, `Docs/events.md` |
 | 완료 | endingResolver 임계값 수정 및 8개 엔딩 검증 | `web/src/game/endingResolver.ts` |
 | 완료 | EndingScreen 이펙트 리디자인 (긍정/부정 분기) | `web/src/screens/EndingScreen.tsx`, `web/src/index.css` |
+| 완료 | ScreenBackdrop 수직 중앙 정렬 버그 수정 | `web/src/components/ScreenBackdrop.tsx` |
 | 대기 중 | 이벤트 4·5·6-5 시나리오 작성 | `Docs/events.md` |
 
 ## 완료된 작업

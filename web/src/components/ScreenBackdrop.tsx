@@ -7,11 +7,9 @@ type ScreenBackdropProps = {
 
 export function ScreenBackdrop({ children, className = '' }: ScreenBackdropProps) {
   return (
-    <main
-      className={`relative flex min-h-screen flex-col ${className}`.trim()}
-    >
+    <main className="relative flex min-h-screen flex-col">
       <div className="absolute inset-0 bg-linear-to-b from-slate-blue to-deep-navy" />
-      <div className="relative z-10 flex flex-1 flex-col">{children}</div>
+      <div className={`relative z-10 flex flex-1 flex-col ${className}`.trim()}>{children}</div>
     </main>
   )
 }
