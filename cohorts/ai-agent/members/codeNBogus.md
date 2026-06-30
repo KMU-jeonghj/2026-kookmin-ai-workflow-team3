@@ -127,6 +127,7 @@
 - [web/src/data/events.ts](../../../web/src/data/events.ts)
 - [Docs/events.md](../../../Docs/events.md)
 
+
 ## 다음 작업
 
 - 이벤트 4 (체코전) 시나리오 작성
